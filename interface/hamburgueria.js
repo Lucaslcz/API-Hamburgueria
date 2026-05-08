@@ -8,12 +8,16 @@ const btnFinalizarCompra = document.getElementById('btn-finalizar');
 const btnVoltarPagamento = document.getElementById('voltar-pagamento');
 const btnSair = document.getElementById('btn-sair');
 
+window.pagamentoProcessando = false;
+
 function adicionarAoPedido(nome, preco, tempo) {
+
+    console.log(nome, preco, tempo);
 
     itensNoPedido.push({
         nome,
         preco,
-        tempoPreparo: tempo
+        tempoPreparo: Number(tempo)
     });
 
     atualizarInterfacePedido();
@@ -81,6 +85,10 @@ function atualizarInterfacePedido() {
 
 async function processarPagamento(metodo) {
 
+    if (window.pagamentoProcessando) return;
+
+    window.pagamentoProcessando = true;
+
     const totalPedido = itensNoPedido.reduce(
         (acc, item) => acc + item.preco,
         0
@@ -90,6 +98,8 @@ async function processarPagamento(metodo) {
         (acc, item) => acc + Number(item.tempoPreparo || 5),
         0
     );
+
+    console.log("TEMPO:", tempoCalculado);
 
     const pedidoAtual = [...itensNoPedido];
 
@@ -104,7 +114,7 @@ async function processarPagamento(metodo) {
         secaoPagamento.style.display = "none";
         secaoMenu.style.display = "block";
 
-        iniciarStatusPedido(tempoCalculado, pedidoAtual);
+        iniciarStatusPedido(tempoCalculado);
 
         try {
 
@@ -132,50 +142,44 @@ async function processarPagamento(metodo) {
     }, 1000);
 }
 
-function iniciarStatusPedido(tempoPreparo, pedidoAtual) {
+function iniciarStatusPedido(tempoPreparo) {
 
-    const rodape = document.querySelector('.rodape-pedido');
+    console.log("INICIOU STATUS");
 
     atualizarStatusVisual(
         "🟡 PREPARANDO PEDIDO",
-        "#f1c40f"
+        "status-preparando"
     );
 
     setTimeout(() => {
 
+        console.log("EM ROTA");
+
         atualizarStatusVisual(
             "🔵 PEDIDO EM ROTA",
-            "#00bfff"
+            "status-rota"
         );
 
         setTimeout(() => {
 
+            console.log("ENTREGUE");
+
             atualizarStatusVisual(
                 "🟢 PEDIDO ENTREGUE",
-                "#2ecc71"
+                "status-entregue"
             );
 
             setTimeout(() => {
+
+                console.log("LIMPOU");
 
                 itensNoPedido = [];
 
                 atualizarInterfacePedido();
 
-                rodape.innerHTML = `
+                document.getElementById('status-pedido').innerHTML = '';
 
-                    <div class="linha-divisoria"></div>
-
-                    <div class="total-container">
-
-                        <span>TOTAL:</span>
-
-                        <span id="valor-total">
-                            R$ 0,00
-                        </span>
-
-                    </div>
-
-                `;
+                window.pagamentoProcessando = false;
 
             }, 5000);
 
@@ -184,36 +188,16 @@ function iniciarStatusPedido(tempoPreparo, pedidoAtual) {
     }, tempoPreparo * 1000);
 }
 
-function atualizarStatusVisual(texto, cor) {
+function atualizarStatusVisual(texto, classe) {
 
-    const rodape = document.querySelector('.rodape-pedido');
+    const status = document.getElementById('status-pedido');
 
-    if (!rodape) return;
+    if (!status) return;
 
-    rodape.innerHTML = `
-
-        <div class="linha-divisoria"></div>
-
-        <div
-            style="
-                text-align:center;
-                padding:15px;
-                font-weight:bold;
-                color:${cor};
-                border:2px solid ${cor};
-                border-radius:8px;
-                margin-top:10px;
-                font-family:sans-serif;
-                font-size:0.9rem;
-                background:rgba(255,255,255,0.03);
-                box-shadow:0 0 10px ${cor};
-                letter-spacing:1px;
-            ">
-
+    status.innerHTML = `
+        <div class="status-box ${classe}">
             ${texto}
-
         </div>
-
     `;
 }
 
