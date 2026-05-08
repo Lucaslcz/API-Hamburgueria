@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="hamburgueria.css">
     <link rel="stylesheet" href="cardapio.css">
+    <link rel="stylesheet" href="historico.css">
 </head>
 <body>
     <header>
@@ -68,7 +69,23 @@
         </aside>
     </main>
 
+    <div id="modal-historico" class="modal-overlay">
+        <div class="modal-content">
+            <button class="btn-fechar" id="fechar-modal-hist">&times;</button>
+            <div class="lista-pedidos-sidebar">
+                <h3 class="titulo-sidebar">Histórico</h3>
+                <div class="linha-divisoria-titulo"></div> <div id="scroll-pedidos" class="scroll-pedidos"></div>
+            </div>
+            <div id="detalhe-hist-container" class="detalhes-painel">
+                <div class="placeholder-detalhes">
+                    <p>Selecione um pedido.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="hamburgueria.js"></script>
     <script src="cardapio.js"></script>
+    <script src="historico.js"></script>
 </body>
 </html>

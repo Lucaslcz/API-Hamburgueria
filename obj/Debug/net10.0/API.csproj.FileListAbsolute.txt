@@ -26,3 +26,4 @@ C:\Users\Lucas\Documents\Nova pasta\OUTROS\Programação\DevGit\API-Hamburgueria
 C:\Users\Lucas\Documents\Nova pasta\OUTROS\Programação\DevGit\API-Hamburgueria\obj\Debug\net10.0\API.pdb
 C:\Users\Lucas\Documents\Nova pasta\OUTROS\Programação\DevGit\API-Hamburgueria\obj\Debug\net10.0\API.genruntimeconfig.cache
 C:\Users\Lucas\Documents\Nova pasta\OUTROS\Programação\DevGit\API-Hamburgueria\obj\Debug\net10.0\ref\API.dll
+C:\Users\Lucas\Documents\Nova pasta\OUTROS\Programação\DevGit\API-Hamburgueria\obj\Debug\net10.0\API.sourcelink.json

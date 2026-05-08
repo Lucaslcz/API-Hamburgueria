@@ -179,6 +179,73 @@
     font-weight: bold;
 }
 
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.item-carrinho-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-carrinho-nome {
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.item-carrinho-preco {
+    color: #2ecc71;
+    font-size: 0.85rem;
+}
+
+.btn-remover-item {
+    background: #eb4f4f;
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-remover-item:hover {
+    background: #ff6666;
+}
+
+.status-pedido {
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    border: 2px solid;
+}
+
+.status-preparando {
+    color: #f1c40f;
+    border-color: #f1c40f;
+}
+
+.status-rota {
+    color: #00ffff;
+    border-color: #00ffff;
+}
+
+.status-entregue {
+    color: #2ecc71;
+    border-color: #2ecc71;
+}
+
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
