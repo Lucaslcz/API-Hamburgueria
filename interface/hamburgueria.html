@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Hamburgueria Calabreso</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="hamburgueria.css">
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+    <header>
+        <h1>HAMBURGUERIA CALABRESO</h1>
+    </header>
+
+    <main class="container">
+        <div class="coluna-esquerda">
+            <section class="menu">
+                <h2 class="menu-titulo">OPÇÕES DO MENU</h2>
+                <div class="linha-amarela"></div>
+                <nav class="lista-menu">
+                    <button class="opcao-menu" id="btn-ver-cardapio">VER CARDÁPIO</button>
+                    <button class="opcao-menu" id="btn-finalizar">FINALIZAR PEDIDO</button>
+                    <button class="opcao-menu">PROMOÇÕES DO DIA</button>
+                    <button class="opcao-menu" id="btn-historico">HISTÓRICO DE COMPRA</button>
+                    <button class="opcao-menu-sair" id="btn-sair">SAIR</button>
+                </nav>
+            </section>
+
+            <section id="cardapio" class="cardapio" style="display: none;">
+                <div class="cardapio-header">
+                    <h2>CARDÁPIO COMPLETO</h2>
+                    <button id="fechar-cardapio">&times;</button>
+                </div>
+                <div class="linha-amarela"></div>
+                <div id="lista-produtos-cardapio" class="grid-cardapio"></div>
+            </section>
+
+            <section id="pagamento">
+                <h2 class="titulo-pagamento">FORMA DE PAGAMENTO</h2>
+                <div class="lista-pagamento">
+                    <button class="opcao-menu" onclick="processarPagamento('Pix')">💎 PIX</button>
+                    <button class="opcao-menu" onclick="processarPagamento('Cartão de Crédito')">💳 CARTÃO DE CRÉDITO</button>
+                    <button class="opcao-menu" onclick="processarPagamento('Boleto')">📄 BOLETO</button>
+                    <button id="voltar-pagamento" class="opcao-menu">CANCELAR</button>
+                </div>
+            </section>
+        </div>
+
+        <aside class="painel-pedido">
+            <h2 class="titulo-pedido">SEU PEDIDO</h2>
+            <div class="linha-azul"></div>
+            <div id="itens-pedido" class="itens-pedido">
+                <p class="vazio">O carrinho está vazio.</p>
+            </div>
+            <div class="rodape-pedido">
+                <div class="linha-divisoria"></div>
+                <div class="total-container">
+                    <span>TOTAL:</span>
+                    <span id="valor-total">R$ 0,00</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="hamburgueria.js"></script>
+    <script src="cardapio.js"></script>
+</body>
+</html>

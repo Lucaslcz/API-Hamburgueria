@@ -1,0 +1,45 @@
+[
+  { "Id": 1, "Nome": "X-Burguer Clássico", "Categoria": "Hambúrguer", "Preco": 18.90, "TempoPreparo": 15 },
+  { "Id": 2, "Nome": "X-Salada", "Categoria": "Hambúrguer", "Preco": 20.90, "TempoPreparo": 15 },
+  { "Id": 3, "Nome": "X-Bacon", "Categoria": "Hambúrguer", "Preco": 24.90, "TempoPreparo": 20 },
+  { "Id": 4, "Nome": "X-Tudo", "Categoria": "Hambúrguer", "Preco": 29.90, "TempoPreparo": 25 },
+  { "Id": 5, "Nome": "Burger Duplo Cheddar", "Categoria": "Hambúrguer", "Preco": 27.50, "TempoPreparo": 20 },
+  { "Id": 6, "Nome": "Burger BBQ", "Categoria": "Hambúrguer", "Preco": 28.90, "TempoPreparo": 20 },
+  { "Id": 7, "Nome": "Burger Picante", "Categoria": "Hambúrguer", "Preco": 26.90, "TempoPreparo": 18 },
+  { "Id": 8, "Nome": "Smash Burger", "Categoria": "Hambúrguer", "Preco": 22.90, "TempoPreparo": 12 },
+
+  { "Id": 9, "Nome": "Chicken Burger", "Categoria": "Frango", "Preco": 21.90, "TempoPreparo": 15 },
+  { "Id": 10, "Nome": "Chicken Crispy", "Categoria": "Frango", "Preco": 23.90, "TempoPreparo": 18 },
+  { "Id": 11, "Nome": "Chicken Bacon", "Categoria": "Frango", "Preco": 25.90, "TempoPreparo": 20 },
+
+  { "Id": 12, "Nome": "Burger Vegano", "Categoria": "Vegano", "Preco": 26.90, "TempoPreparo": 15 },
+  { "Id": 13, "Nome": "Burger de Grão-de-Bico", "Categoria": "Vegano", "Preco": 25.90, "TempoPreparo": 15 },
+
+  { "Id": 14, "Nome": "Batata Frita Pequena", "Categoria": "Acompanhamento", "Preco": 10.00, "TempoPreparo": 5 },
+  { "Id": 15, "Nome": "Batata Frita Média", "Categoria": "Acompanhamento", "Preco": 13.00, "TempoPreparo": 7 },
+  { "Id": 16, "Nome": "Batata Frita Grande", "Categoria": "Acompanhamento", "Preco": 16.00, "TempoPreparo": 10 },
+  { "Id": 17, "Nome": "Batata com Cheddar e Bacon", "Categoria": "Acompanhamento", "Preco": 18.90, "TempoPreparo": 12 },
+  { "Id": 18, "Nome": "Onion Rings", "Categoria": "Acompanhamento", "Preco": 14.50, "TempoPreparo": 8 },
+  { "Id": 19, "Nome": "Nuggets (10 unidades)", "Categoria": "Acompanhamento", "Preco": 15.90, "TempoPreparo": 10 },
+
+  { "Id": 20, "Nome": "Combo Clássico", "Categoria": "Combo", "Preco": 29.90, "TempoPreparo": 30 },
+  { "Id": 21, "Nome": "Combo Bacon", "Categoria": "Combo", "Preco": 34.90, "TempoPreparo": 35 },
+  { "Id": 22, "Nome": "Combo Duplo", "Categoria": "Combo", "Preco": 39.90, "TempoPreparo": 40 },
+  { "Id": 23, "Nome": "Combo Chicken", "Categoria": "Combo", "Preco": 32.90, "TempoPreparo": 30 },
+
+  { "Id": 24, "Nome": "Refrigerante Lata", "Categoria": "Bebida", "Preco": 6.00, "TempoPreparo": 2 },
+  { "Id": 25, "Nome": "Refrigerante 600ml", "Categoria": "Bebida", "Preco": 8.50, "TempoPreparo": 2 },
+  { "Id": 26, "Nome": "Refrigerante 2L", "Categoria": "Bebida", "Preco": 12.00, "TempoPreparo": 3 },
+  { "Id": 27, "Nome": "Suco Natural", "Categoria": "Bebida", "Preco": 9.00, "TempoPreparo": 10 },
+  { "Id": 28, "Nome": "Água Mineral", "Categoria": "Bebida", "Preco": 4.00, "TempoPreparo": 1 },
+  { "Id": 29, "Nome": "Água com Gás", "Categoria": "Bebida", "Preco": 5.00, "TempoPreparo": 1 },
+  { "Id": 30, "Nome": "Milkshake Chocolate", "Categoria": "Bebida", "Preco": 15.00, "TempoPreparo": 12 },
+  { "Id": 31, "Nome": "Milkshake Morango", "Categoria": "Bebida", "Preco": 15.00, "TempoPreparo": 12 },
+  { "Id": 32, "Nome": "Milkshake Baunilha", "Categoria": "Bebida", "Preco": 15.00, "TempoPreparo": 12 },
+  { "Id": 33, "Nome": "Milkshake Oreo", "Categoria": "Bebida", "Preco": 17.00, "TempoPreparo": 15 },
+  
+  { "Id": 34, "Nome": "Brownie", "Categoria": "Sobremesa", "Preco": 12.00, "TempoPreparo": 5 },
+  { "Id": 35, "Nome": "Sorvete", "Categoria": "Sobremesa", "Preco": 10.00, "TempoPreparo": 5 },
+  { "Id": 36, "Nome": "Petit Gateau", "Categoria": "Sobremesa", "Preco": 16.00, "TempoPreparo": 15 },
+  { "Id": 37, "Nome": "Torta de Chocolate", "Categoria": "Sobremesa", "Preco": 14.00, "TempoPreparo": 5 }
+]
